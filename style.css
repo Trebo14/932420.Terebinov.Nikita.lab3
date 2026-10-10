@@ -5,12 +5,17 @@
     --accent-tr-20: rgba(168, 120, 255, 0.2); 
     --accent-tr-15: rgba(168, 120, 255, 0.15);
     --card-bg: rgba(255, 255, 255, 0.05);
+    --visited: #8a5fd0;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
 }
 
 html {
@@ -63,7 +68,7 @@ a {
     text-decoration: none;
 }
 
-a:visited { color: var(--text-color); }
+a:visited { color: var(--visited); }
 
 a:hover   { text-decoration: underline; }
 
@@ -228,6 +233,14 @@ aside {
     border-radius: 6px;
 }
 
+.band-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: block;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
@@ -277,6 +290,13 @@ footer {
     opacity: 0.85;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -284,12 +304,19 @@ img {
 
 @media (max-width: 992px) {
     .release-card {
-        flex: 1 1 calc(25% - 15px);
+        flex: 1 1 45%;
         max-width: none;
     }
 
     .equipment-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 993px) {
+    .release-card {
+        flex: 1 1 calc(25% - 15px);
+        max-width: none;
     }
 }
 
