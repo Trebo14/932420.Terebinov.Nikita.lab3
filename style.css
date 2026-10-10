@@ -139,8 +139,8 @@ a:hover   { text-decoration: underline; }
 .release-title::after {
     content: "";
     display: inline-block;
-    width: 30px;
-    height: 12px;
+    width: 22px;
+    height: 10px;
     background-color: var(--accent-color);
     vertical-align: middle;
     transition: background-color 0.3s;
@@ -297,7 +297,7 @@ img {
 
     .release-title::before,
     .release-title::after {
-        width: 18px;
+        width: 16px;
         height: 8px;
     }
 
