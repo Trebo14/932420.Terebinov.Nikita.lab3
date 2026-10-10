@@ -33,21 +33,16 @@ body {
     overflow-x: hidden;
 }
 
-/* static - значение по умолчанию: элемент в обычном потоке документа */
 main {
     position: static;
 }
 
-/* relative - элемент остаётся в потоке, но становится точкой отсчёта
-   для вложенных absolute-элементов (здесь для .rec-badge) */
 header {
     position: relative;
     text-align: center;
     padding: 20px 0;
 }
 
-/* absolute - элемент вырван из потока и привязан к ближайшему
-   relative-родителю (header). Здесь бейдж REC в правом верхнем углу */
 .rec-badge {
     position: absolute;
     top: 10px;
@@ -219,7 +214,6 @@ button:hover  { background: var(--text-color); }
 
 button:active { transform: scale(0.98); }
 
-/* :focus для кнопки */
 button:focus {
     outline: 2px solid var(--text-color);
     outline-offset: 3px;
