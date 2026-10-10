@@ -262,3 +262,60 @@ footer {
     color: var(--text-color);
     opacity: 0.85;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .release-card {
+        flex: 1 1 45%;
+        max-width: none;
+    }
+
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 16px;
+        padding: 0 12px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .release-card {
+        flex: 1 1 100%;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+}
