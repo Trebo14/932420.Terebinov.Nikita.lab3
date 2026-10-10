@@ -7,6 +7,16 @@
     --card-bg: rgba(255, 255, 255, 0.05);
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: var(--main-color);
     color: var(--text-color);
@@ -14,6 +24,8 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0 20px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* static - значение по умолчанию: элемент в обычном потоке документа */
@@ -50,7 +62,9 @@ a {
     color: var(--accent-color);
     text-decoration: none;
 }
+
 a:visited { color: var(--text-color); }
+
 a:hover   { text-decoration: underline; }
 
 .main-nav ul {
@@ -61,7 +75,7 @@ a:hover   { text-decoration: underline; }
     padding: 0;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 15;
+    margin-top: 15px;
 }
 
 .main-nav a{
@@ -110,7 +124,7 @@ a:hover   { text-decoration: underline; }
 .release-title {
     margin: 10px 0 5px 0;
     font-size: 1.2rem;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 .release-genre,
@@ -146,6 +160,7 @@ a:hover   { text-decoration: underline; }
 }
 
 .release-title::before { margin-right: 10px; }
+
 .release-title::after  { margin-left: 10px; }
 
 @keyframes shake {
@@ -192,6 +207,7 @@ button {
 }
 
 button:hover  { background: var(--text-color); }
+
 button:active { transform: scale(0.98); }
 
 /* :focus для кнопки */
@@ -251,22 +267,10 @@ footer {
 }
 
 .equipment-card p {
-    margin: 5PX 0 0 0;
+    margin: 5px 0 0 0;
     font-size: 0.9rem;
     color: var(--text-color);
     opacity: 0.85;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    overflow-x: hidden;
-    max-width: 100%;
 }
 
 img {
@@ -291,6 +295,16 @@ img {
         padding: 0 12px;
     }
 
+    .release-title::before,
+    .release-title::after {
+        width: 18px;
+        height: 8px;
+    }
+
+    .release-title::before { margin-right: 5px; }
+
+    .release-title::after  { margin-left: 5px; }
+
     h1 {
         font-size: 1.6rem;
     }
@@ -305,8 +319,18 @@ img {
         gap: 10px;
     }
 
+    .main-nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     .release-card {
         flex: 1 1 100%;
+    }
+
+    .releases-container {
+        gap: 15px;
     }
 
     .equipment-grid {
