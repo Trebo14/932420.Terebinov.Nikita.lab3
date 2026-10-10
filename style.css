@@ -7,6 +7,7 @@
     --card-bg:#ffffff0d;
     --visited:#a070f0;
 }
+
 *,
 *::before,
 *::after {
@@ -133,6 +134,7 @@ a:hover {
     color: var(--text-color);
 }
 
+.release-type,
 .release-genre,
 .release-year {
     margin: 5px 0;
@@ -179,6 +181,10 @@ a:hover {
 .release-title:hover::after {
     background-color: var(--text-color);
     animation: shake 0.4s infinite;
+}
+
+.release-type {
+    font-weight: 600;
 }
 
 input,
