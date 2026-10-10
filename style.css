@@ -1,13 +1,12 @@
 :root {
-    --main-color: #0d1b3e;
-    --accent-color: #a878ff;
-    --text-color: #e6e6fa;
-    --accent-tr-20: rgba(168, 120, 255, 0.2); 
-    --accent-tr-15: rgba(168, 120, 255, 0.15);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --visited: #8a5fd0;
+    --main-color:#0d1b3e;
+    --accent-color:#a878ff;
+    --text-color:#e6e6fa;
+    --accent-tr-20:#a878ff33;
+    --accent-tr-15:#a878ff26;
+    --card-bg:#ffffff0d;
+    --visited:#a070f0;
 }
-
 *,
 *::before,
 *::after {
@@ -65,7 +64,10 @@ a {
 
 a:visited { color: var(--visited); }
 
-a:hover   { text-decoration: underline; }
+a:hover { 
+    text-decoration: underline;
+    color: var(--text-color);
+}
 
 #skills-list {
     list-style-type: square;
